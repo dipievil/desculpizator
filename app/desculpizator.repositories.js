@@ -1,8 +1,19 @@
 angular.module ('desculpizatorApp.Repositories')
 	.factory ('modoRepository', ['$http', function ($http) { 
 		return { 
-			buscarCulpado: function (callback) { 
+			buscarModo: function (callback) { 
 				$http.get ('../model/modo.json').success (function (data) { 
+				callback (data); 
+			}); 
+		} 
+	}; 
+}]);
+
+angular.module ('desculpizatorApp.Repositories')
+	.factory ('acaoRepository', ['$http', function ($http) { 
+		return { 
+			buscaAcao: function (callback) { 
+				$http.get ('../model/acao.json').success (function (data) { 
 				callback (data); 
 			}); 
 		} 
@@ -21,10 +32,10 @@ angular.module ('desculpizatorApp.Repositories')
 }]);
 
 angular.module ('desculpizatorApp.Repositories')
-	.factory ('acaoRepository', ['$http', function ($http) { 
+	.factory ('vitimaRepository', ['$http', function ($http) { 
 		return { 
-			buscarAcao: function (callback) { 
-				$http.get ('../model/acao.json').success (function (data) { 
+			buscarVitima: function (callback) { 
+				$http.get ('../model/vitima.json').success (function (data) { 
 				callback (data); 
 			}); 
 		} 

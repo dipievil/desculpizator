@@ -1,4 +1,8 @@
-desculpizatorApp.controller("desculpaController", function ($scope,  $http, acaoRepository, culpadoRepository)
+desculpizatorApp.controller("desculpaController", function ($scope,  
+															$http, 
+															acaoRepository, 
+															modoRepository, 
+															culpadoRepository)
 {
 	angular.module('desculpizatorApp', ['angular-route']);	
 
@@ -10,7 +14,7 @@ desculpizatorApp.controller("desculpaController", function ($scope,  $http, acao
 	$scope.valueVitima = '';	
 
 	
-	modoRepository.buscarCulpado (function (data){
+	modoRepository.buscarModo (function (data){
 		$scope.modoModel = data;
 	});
 	
