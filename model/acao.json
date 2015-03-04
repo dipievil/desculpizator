@@ -1,0 +1,17 @@
+[
+	{'id':1, 'string':'aprovou'}
+	{'id':2, 'string':'sancionou'}
+	{'id':3, 'string':'vendeu'}
+	{'id':4, 'string':'construiu'}
+	{'id':5, 'string':'iludiu'}
+	{'id':6, 'string':'mandou matar'}
+	{'id':7, 'string':'criou'}
+	{'id':8, 'string':'desarmou'}
+	{'id':9, 'string':'matou de fome'}
+	{'id':10, 'string':'roubou'}
+	{'id':11, 'string':'salvou'}
+	{'id':12, 'string':'escondeu'}
+	{'id':13, 'string':'sabotou'}
+	{'id':14, 'string':'mentiu para'}
+	{'id':15, 'string':'armou uma armadilha para'}
+]

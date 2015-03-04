@@ -1,0 +1,83 @@
+<div id="formDesculpa" name="formDesculpa" style="padding:20px;" ng-controller="desculpaController">
+			<form id="formDesculpa" name="formDesculpa" class="form-horizontal" method="post" >
+				<fieldset>
+
+					<!-- Form Name -->
+					<legend>Suas desculpas</legend>
+					<p>Ent&atilde;o voc&ecirc; sabe dizer porque isso aconteceu? Explique ent&atilde;o: de quem &eacute; a culpa?</p>
+					<br/>
+					
+					<div class="form-group" id="txt_modo">
+					  <label class="col-md-4 control-label" for="cbo_modo" >Modo</label>
+					  <div class="col-md-4">
+						<select id="cbo_modo" 
+								name="cbo_modo" 
+								class="form-control" 
+								ng-model="valueModo" 
+								onchange="javascript:showNext('txt_culpado');" >
+							<option ng-repeat="modo in modoModel" value="{{modo.id}}">{{modo.string}}</option>
+						</select>
+					  </div>
+					</div>					
+
+					<div class="form-group" id="txt_culpado" style="display:none;">
+					  <label class="col-md-4 control-label" for="cbo_culpado">Isso &eacute; culpa de quem?</label>
+					  <div class="col-md-4">
+						<select id="cbo_culpado" 
+								name="cbo_culpado" 
+								class="form-control" 
+								ng-model="valueCulpado" 
+								ng-change="MontaDesculpa()" 
+								onchange="javascript:showNext('txt_acao')" >
+								<option value=""></option>
+							<option ng-repeat="culp in culpadoModel" value={{culp.value}}">{{culp.string}}</option>
+						</select>
+					  </div>
+					</div>
+
+					<div class="form-group" id="txt_acao" style="display:none;">
+					  <label class="col-md-4 control-label" for="cbo_acao">Que fez o qu&ecirc;?</label>
+						  <div class="col-md-4" >
+							<select id="cbo_acao" 
+									name="cbo_acao" 
+									class="form-control" 
+									ng-model="valueAcao" 
+									ng-change="MontaDesculpa()"  
+									onchange="javascript:showNext('txt_vitima');" >
+								<option ng-repeat="acao in acaoModel" value="{{acao.id}}">{{acao.string}}</option>
+							</select>
+						  </div>
+					</div>
+
+					<div class="form-group" id="txt_vitima" style="display:none;">
+					  <label class="col-md-4 control-label" for="cbo_vitima">Para quem?</label>
+					  <div class="col-md-4">
+						<select id="cbo_vitima" name="cbo_vitima" class="form-control" onchange="showNext('txt_desculpa')" ng-model="valueVitima" ng-change="MontaDesculpa()" >
+						  <option value="o Brasil">o Brasil</option>
+						  <option value="o Estatuto do desarmamento">o Estatuto do desarmamento</option>
+						  <option value="o Brasil para os EUA">o Brasil para os EUA</option>
+						  <option value="o povo brasileiro">o povo brasileiro</option>
+						  <option value="os negros">os negros</option>
+						  <option value="os brancos">os brancos</option>
+						  <option value="os ETs">os ETs</option>
+						  <option value="o sexo">o sexo</option>
+						  <option value="o avião">o avião</option>
+						  <option value="a mala">a mala</option>
+						  <option value="o dinheiro do povo">o dinheiro do povo</option>
+						  <option value="a soberania nacional">a soberania nacional</option>
+						  <option value="o exército brasileiro">o exército brasileiro</option>
+						  <option value="a nação">a nação</option>
+						</select>
+					  </div>
+					</div>
+					
+					<div class="form-group" id="txt_desculpa" style="display:none;">
+						<label class="col-md-4 control-label" for="txt_suadesculpa">Sua vers&atilde;o dos fatos &eacute;:</label>
+						<div class="col-md-4">                     
+							<textarea class="form-control" id="txt_suadesculpa" name="txt_suadesculpa">{{onDesculpaFinal}}</textarea>
+						</div>
+					</div>
+				
+				</fieldset>
+			</form>
+		</div>

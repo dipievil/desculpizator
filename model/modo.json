@@ -1,0 +1,34 @@
+[
+    {
+        "id": 0,
+        "string": "Básico"
+    },
+    {
+        "id": 1,
+        "string": "Educado"
+    },
+    {
+        "id": 2,
+        "string": "Apressado"
+    },
+    {
+        "id": 3,
+        "string": "Inseguro"
+    },
+    {
+        "id": 4,
+        "string": "Confiante"
+    },
+    {
+        "id": 5,
+        "string": "Estressado"
+    },
+    {
+        "id": 6,
+        "string": "Feliz"
+    },
+    {
+        "id": 7,
+        "string": "Ingnorante"
+    }
+]
