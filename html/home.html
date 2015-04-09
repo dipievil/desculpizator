@@ -52,21 +52,14 @@
 					<div class="form-group" id="txt_vitima" style="display:none;">
 					  <label class="col-md-4 control-label" for="cbo_vitima">Para quem?</label>
 					  <div class="col-md-4">
-						<select id="cbo_vitima" name="cbo_vitima" class="form-control" onchange="showNext('txt_desculpa')" ng-model="valueVitima" ng-change="MontaDesculpa()" >
-						  <option value="o Brasil">o Brasil</option>
-						  <option value="o Estatuto do desarmamento">o Estatuto do desarmamento</option>
-						  <option value="o Brasil para os EUA">o Brasil para os EUA</option>
-						  <option value="o povo brasileiro">o povo brasileiro</option>
-						  <option value="os negros">os negros</option>
-						  <option value="os brancos">os brancos</option>
-						  <option value="os ETs">os ETs</option>
-						  <option value="o sexo">o sexo</option>
-						  <option value="o avião">o avião</option>
-						  <option value="a mala">a mala</option>
-						  <option value="o dinheiro do povo">o dinheiro do povo</option>
-						  <option value="a soberania nacional">a soberania nacional</option>
-						  <option value="o exército brasileiro">o exército brasileiro</option>
-						  <option value="a nação">a nação</option>
+						<select id="cbo_vitima" 
+								name="cbo_vitima" 
+								class="form-control" 
+								onchange="showNext('txt_desculpa')" 
+								ng-model="valueVitima" 
+								ng-change="MontaDesculpa()" >
+								<option ng-repeat="vitima in vitimaModel" value="{{vitima.id}}">{{vitima.string}}</option>
+
 						</select>
 					  </div>
 					</div>
